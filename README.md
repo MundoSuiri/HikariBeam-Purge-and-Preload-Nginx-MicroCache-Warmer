@@ -32,7 +32,15 @@ Al analizar las herramientas más populares en GitHub para la gestión de caché
 1. **Purga Físicamente Quirúrgica en RAM:**
    - Calcula el hash MD5 de la directiva de clave Nginx:  
       $$
-      \mathtt{key} = \mathtt{scheme} + \mathtt{method} + \mathtt{host} + \mathtt{request\_uri}
+      \mathtt{cache\_key}
+      =
+      \mathtt{\$scheme}
+      \; || \;
+      \mathtt{\$request\_method}
+      \; || \;
+      \mathtt{\$host}
+      \; || \;
+      \mathtt{\$request\_uri}
       $$
 
    
