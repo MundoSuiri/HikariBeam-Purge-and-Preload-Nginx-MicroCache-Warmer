@@ -1,4 +1,4 @@
-# Suiri Fullstack Cache Engine
+# 光 HikariBeam: Purge & Preload Nginx MicroCache Warmer
 
 Motor ultra-ligero de **purga quirúrgica en RAM (`/dev/shm`)**, **purga selectiva en Cloudflare Edge API** y **precalentamiento asíncrono no bloqueante (Cache Warmer)** para WordPress y Nginx FastCGI Microcache.
 
@@ -64,3 +64,4 @@ define( 'CLOUDFLARE_PURGE_API_TOKEN', 'tu_token_con_permiso_Cache_Purge' );
 
 Distribuido bajo la licencia [GPL-2.0-or-later](LICENSE).  
 Desarrollado con orgullo para el ecosistema abierto de [MundoSuiri](https://github.com/MundoSuiri).
+

@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Suiri Fullstack Cache Engine (Nginx Microcache & Cloudflare Edge Purge + Warmer)
+ * Plugin Name:  光 HikariBeam: Purge & Preload Nginx MicroCache Warmer
  * Plugin URI:  https://github.com/MundoSuiri/suiri-fullstack-cache
  * Description: Purga quirúrgica en memoria RAM (/dev/shm), purga selectiva de URLs en Cloudflare Edge API y precalentamiento asíncrono no bloqueante.
  * Version:     3.0.0
@@ -160,3 +160,4 @@ class Suiri_Fullstack_Cache_Engine {
 }
 
 Suiri_Fullstack_Cache_Engine::init();
+
