@@ -1,5 +1,7 @@
 # 光 Beam Purge Preload Nginx MicroCache Warmer
 
+Pronunciado HikariBeam Purge & Preload Nginx MicroCache Warmer
+
 Motor ultra-ligero de **purga quirúrgica en RAM (`/dev/shm`)**, **purga selectiva en Cloudflare Edge API** y **precalentamiento asíncrono no bloqueante (Cache Warmer)** para WordPress y Nginx FastCGI Microcache.
 
 Diseñado con ingeniería de precisión para infraestructuras de recursos estrictos (como instancias Google Cloud `e2-micro` de 1 GB RAM con discos persistentes limitados a 45 IOPS).
