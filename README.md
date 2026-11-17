@@ -30,21 +30,18 @@ Al analizar las herramientas más populares en GitHub para la gestión de caché
 ## 🚀 Características Clave
 
 1. **Purga Físicamente Quirúrgica en RAM:**
-   - Calcula el hash MD5 de la directiva de clave Nginx:  
-      $$
-      \mathtt{cache\_key}
-      =
-      \mathtt{\$scheme}
-      \; || \;
-      \mathtt{\$request\_method}
-      \; || \;
-      \mathtt{\$host}
-      \; || \;
-      \mathtt{\$request\_uri}
-      $$
 
-   
+
+   - Calcula el hash MD5 de la directiva de clave Nginx:  
+
+## Cache Key Generation
+
+       
+
+   The cache key is built from the request components:
+      
      $$\text{key} = \text{scheme} + \text{method} + \text{host} + \text{request\_uri}$$
+     
    - Resuelve la topología `levels=1:2` y borra con `@unlink()` exactamente el archivo de caché en `/dev/shm/nginx-cache/`, sin vaciar toda la caché ni causar degradación global.
 2. **Sincronización con Cloudflare Edge (CDN):**
    - Dispara una llamada a la API de Cloudflare (`/zones/{zone_id}/purge_cache`) enviando únicamente las URLs afectadas (`files: [...]`).
