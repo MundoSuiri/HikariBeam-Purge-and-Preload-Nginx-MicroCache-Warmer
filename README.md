@@ -1,4 +1,4 @@
-# Suiri Fullstack Cache Engine
+# 光-Warp-Auto-Cache
 
 Motor ultra-ligero de **purga quirúrgica en RAM (`/dev/shm`)**, **purga selectiva en Cloudflare Edge API** y **precalentamiento asíncrono no bloqueante (Cache Warmer)** para WordPress y Nginx FastCGI Microcache.
 
