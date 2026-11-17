@@ -40,7 +40,7 @@ Al analizar las herramientas más populares en GitHub para la gestión de caché
 
    The cache key is built from the request components:
       
-     $$\text{key} = \text{scheme} + \text{method} + \text{host} + \text{request\_uri}$$
+     cache_key = scheme + method + host + request_uri
      
    - Resuelve la topología `levels=1:2` y borra con `@unlink()` exactamente el archivo de caché en `/dev/shm/nginx-cache/`, sin vaciar toda la caché ni causar degradación global.
 2. **Sincronización con Cloudflare Edge (CDN):**
