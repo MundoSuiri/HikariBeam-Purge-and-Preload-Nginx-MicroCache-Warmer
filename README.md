@@ -1,5 +1,7 @@
 # 光 HikariBeam: Purge & Preload Nginx MicroCache Warmer
 
+Pronunciado HikariBeam Purge & Preload Nginx MicroCache Warmer
+
 Motor ultra-ligero de **purga quirúrgica en RAM (`/dev/shm`)**, **purga selectiva en Cloudflare Edge API** y **precalentamiento asíncrono no bloqueante (Cache Warmer)** para WordPress y Nginx FastCGI Microcache.
 
 Diseñado con ingeniería de precisión para infraestructuras de recursos estrictos (como instancias Google Cloud `e2-micro` de 1 GB RAM con discos persistentes limitados a 45 IOPS).
@@ -28,8 +30,18 @@ Al analizar las herramientas más populares en GitHub para la gestión de caché
 ## 🚀 Características Clave
 
 1. **Purga Físicamente Quirúrgica en RAM:**
+
+
    - Calcula el hash MD5 de la directiva de clave Nginx:  
-     $$\text{key} = \text{scheme} + \text{method} + \text{host} + \text{request\_uri}$$
+
+## Cache Key Generation
+
+       
+
+   The cache key is built from the request components:
+      
+     cache_key = scheme + method + host + request_uri
+     
    - Resuelve la topología `levels=1:2` y borra con `@unlink()` exactamente el archivo de caché en `/dev/shm/nginx-cache/`, sin vaciar toda la caché ni causar degradación global.
 2. **Sincronización con Cloudflare Edge (CDN):**
    - Dispara una llamada a la API de Cloudflare (`/zones/{zone_id}/purge_cache`) enviando únicamente las URLs afectadas (`files: [...]`).
@@ -64,4 +76,5 @@ define( 'CLOUDFLARE_PURGE_API_TOKEN', 'tu_token_con_permiso_Cache_Purge' );
 
 Distribuido bajo la licencia [GPL-2.0-or-later](LICENSE).  
 Desarrollado con orgullo para el ecosistema abierto de [MundoSuiri](https://github.com/MundoSuiri).
+
 
