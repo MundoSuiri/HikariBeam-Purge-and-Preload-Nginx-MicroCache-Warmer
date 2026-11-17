@@ -1,4 +1,4 @@
-# 光 Hikari Beam Purge & Preload Nginx MicroCache Warmer
+# 光 HikariBeam: Purge & Preload Nginx MicroCache Warmer
 
 Pronunciado HikariBeam Purge & Preload Nginx MicroCache Warmer
 
